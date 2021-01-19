@@ -1,16 +1,22 @@
+[user]
+	name = "Thomas Bürli"
+	email = "buerli88@gmail.com"
+[alias]
+	tree = log --graph --full-history --all --pretty=format:\"%h%x09%d%x20%s\"
 [pull]
 	rebase = true
-[alias]
-	lg = log --color --graph --pretty=format:'\t%C(red)%h%C(reset) - %<(75,trunc)%s %C(green)%<(15,trunc)%cr %C(bold blue)%<(15,trunc)%an %C(reset)%C(yellow)%d' --abbrev-commit -20
-	a = add .
-	ads = add . && diff --staged
-	ci = commit
 [core]
-	editor = vim
 	autocrlf = input
-[user]
-	name = "Moritz Eck"
-	email = "moritz.eck@gmail.com"
+	safecrlf = warn
+[merge]
+	conflictsyle = diff3
+	tool = kdiff3
 [color]
-	ui = true
+	ui = auto
+[push]
+	default = simple
+[diff]
+	tool = meld
+[mergetool]
+	keepBackup = false
 

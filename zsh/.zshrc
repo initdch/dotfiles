@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/meck/.oh-my-zsh"
+export ZSH="/home/buerli/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -69,37 +69,16 @@ ZSH_THEME="agnoster"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
-  npm
+  	git
+  	npm
 	npx
 	nvm
 	ssh-agent
 	docker
 	ubuntu
 	ansible
-	tmux
 	zsh-syntax-highlighting
 	zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
-
-# User configuration
-
-# Aliases
-alias c="clear"
-alias ll="ls -laFh"
-
-# export local secrets
-export GITHUB_TOKEN=
-export NPM_TOKEN=
-
-# -- required due to wsl2 time update bug --
-# update the time
-sudo hwclock -s
-echo "Time updated! `date`"
-
-# NVM to manage NPM & NODE versions
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

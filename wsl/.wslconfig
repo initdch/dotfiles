@@ -1,4 +1,0 @@
-[wsl2]
-memory=8GB              # How much memory to assign to the WSL2 VM.
-processors=6            # How many processors to assign to the WSL2 VM.
-swap=8GB                # How much swap space to add to the WSL2 VM. 0 for no swap file.

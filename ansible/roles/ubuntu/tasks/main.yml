@@ -1,48 +1,15 @@
 ---
-- name: Ensure the system can use the HTTPS transport for APT
-  stat: path=/usr/lib/apt/methods/https
-  register: apt_https_transport
-
-- name: Install HTTPS transport for APT
-  apt: pkg=apt-transport-https state=present
-
-- name: Enable all repositories in sources.list
-  replace: dest=/etc/apt/sources.list regexp='^#\s?deb(.+)http://(.+)/ubuntu(.+)$' replace='deb\1http://\2/ubuntu\3' backup=yes
-
-- name: Install APT Packages
-  apt: pkg={{ apt_packages }} state=latest update_cache=yes
-
 - name: Upgrade installed packages
   apt: upgrade=yes
 
 - name: Install Snap Packages
   snap: name={{ snap_packages }} classic=yes
 
-- name: Setup default config folder
-  file:
-    path: ~/.config
-    force: yes
-    state: present
-
-- name: Setup Configuration Files
-  file:
-    dest: '{{ item.dest }}'
-    force: yes
-    state: link
-    src: '{{ ansible_env.PWD }}/roles/ubuntu/files/{{ item.filename }}'
-  with_items:
-    - { filename: ansible.cfg, dest: ~/.ansible.cfg }
-
 - name: Setup gitconfig
   template:
     dest: ~/.gitconfig
     src: ../template/gitconfig.j2
     force: yes
-
-- name: Update to latest PIP
-  pip:
-    name: pip
-    state: latest
 
 - name: Remove useless items
   file:
@@ -52,19 +19,3 @@
     - '~/Templates'
     - '~/Public'
     - '~/examples.desktop'
-
-- name: Ansible check if code dir exists.
-  stat:
-    path: /home/meck/code
-  register: code
-
-- name: Create Code dir (if not exists).
-  file:
-    path: /home/meck/code
-    state: directory
-  when: code.stat.exists == false
-# additional tasks
-# - include_tasks: fusuma.yml
-# - include_tasks: docker.yml
-# - include_tasks: zsh.yml
-# - include_tasks: vscode.yml
