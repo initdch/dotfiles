@@ -1,6 +1,6 @@
 [user]
-	name = "Thomas Bürli"
-	email = "buerli88@gmail.com"
+	name = {{ full_name }}
+	email = {{ git_email }}
 [alias]
 	tree = log --graph --full-history --all --pretty=format:\"%h%x09%d%x20%s\"
 [pull]
@@ -19,4 +19,3 @@
 	tool = meld
 [mergetool]
 	keepBackup = false
-

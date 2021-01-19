@@ -6,6 +6,8 @@ apt_packages:
   - vim
   - whois
   - zsh
+  - meld
+  - kdiff3
 
 snap_packages:
   - code

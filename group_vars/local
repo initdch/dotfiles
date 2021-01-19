@@ -1,0 +1,7 @@
+
+dotfiles_user_home: "{{ '~' | expanduser }}"
+dotfiles_home: "{{ dotfiles_user_home }}/projects/dotfiles"
+
+full_name: Thomas Bürli
+git_user: intidch
+git_email: buerli88@gmail.com

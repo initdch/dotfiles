@@ -1,0 +1,40 @@
+
+- name: Make sure zsh is installed
+  become: yes
+  become_user: root
+  become_method: sudo
+  apt: 
+    name: zsh 
+    state: present
+
+- name: Installs curl
+  become: yes
+  become_user: root
+  become_method: sudo
+  apt:
+    name: curl
+    state: present
+
+- name: Checks for oh-my-zsh installation | stat
+  stat:
+    path: "{{dotfiles_user_home}}/.oh-my-zsh"
+  register: oh_my_zsh_stat
+
+- name: Installs oh-my-zsh | raw
+  raw: 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"'
+  when: not oh_my_zsh_stat.stat.exists
+
+- name: Links .zshrc file | file
+  file:
+    src: "{{ dotfiles_home }}/roles/zsh/files/zshrc.link"
+    dest: "{{ dotfiles_user_home }}/.zshrc"
+    state: link
+    force: yes
+
+- name: Change Default Shell to Zsh
+  become: yes
+  become_user: root
+  become_method: sudo
+  user:
+    name: "{{ lookup('env','USER') }}"
+    shell: /bin/zsh
