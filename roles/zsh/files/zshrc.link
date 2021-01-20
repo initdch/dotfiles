@@ -80,3 +80,7 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/buerli/.sdkman"
+[[ -s "/home/buerli/.sdkman/bin/sdkman-init.sh" ]] && source "/home/buerli/.sdkman/bin/sdkman-init.sh"

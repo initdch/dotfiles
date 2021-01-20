@@ -8,6 +8,7 @@ apt_packages:
   - zsh
   - meld
   - kdiff3
+  - gnome-shell-pomodoro
 
 snap_packages:
   - code

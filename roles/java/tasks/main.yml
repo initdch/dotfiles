@@ -1,0 +1,16 @@
+
+- name: Install SDKMAN
+  command: "curl -s 'https://get.sdkman.io' | bash"
+  args: 
+    creates: ~/.sdkman
+
+# sdk is not a script but collection of shell functions
+# - name: Install java 8
+#   command:  zsh -lc "sdk install java 8.0.275.hs-adpt"
+#   args:
+#     creates: ~/.sdkman/candidates/java/8.0.275.hs-adpt/
+
+# - name: Install java 11
+#   command: zsh -lc "sdk install java 11.0.9.hs-adpt"
+#   args:
+#     creates: ~/.sdkman/candidates/java/11.0.9.hs-adpt/
