@@ -79,7 +79,11 @@ plugins=(
 	ansible
 )
 
+source $ZSH/secrets
 source $ZSH/oh-my-zsh.sh
+
+
+zstyle :omz:plugins:ssh-agent identities id_ed25519_joineer id_ed25519_nevis_watchtower
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/buerli/.sdkman"

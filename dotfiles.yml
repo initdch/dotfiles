@@ -1,5 +1,5 @@
 ---
-- name: Ubuntu Install Everything I Want
+- name: Ubuntu Dev Setup
   hosts: local
   roles:
     - base

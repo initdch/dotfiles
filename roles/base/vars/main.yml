@@ -14,3 +14,4 @@ snap_packages:
   - code
   - slack
   - intellij-idea-ultimate
+  - exercism
