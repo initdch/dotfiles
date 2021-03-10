@@ -10,6 +10,9 @@ apt_packages:
   - kdiff3
   - npm
   - gnome-shell-pomodoro
+  - golang
+  - yubikey-manager
+  - scdaemon
 
 snap_packages:
   - code

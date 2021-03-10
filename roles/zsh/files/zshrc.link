@@ -77,13 +77,16 @@ plugins=(
 	docker
 	ubuntu
 	ansible
+	golang
 )
 
 source $HOME/.secrets
+zstyle :omz:plugins:ssh-agent identities id_ed25519_joineer id_ed25519_nevis_watchtower
+
 source $ZSH/oh-my-zsh.sh
 
-
-zstyle :omz:plugins:ssh-agent identities id_ed25519_joineer id_ed25519_nevis_watchtower
+# Aliases
+alias gw="./gradlew"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
