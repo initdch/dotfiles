@@ -13,9 +13,11 @@ apt_packages:
   - golang
   - yubikey-manager
   - scdaemon
+  - npm
 
 snap_packages:
   - code
   - slack
   - intellij-idea-ultimate
   - exercism
+  - flameshot
