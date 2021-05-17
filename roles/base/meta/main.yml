@@ -2,4 +2,5 @@ dependencies:
 - { role: git }
 - { role: vim }
 - { role: zsh }
+- { role: gpg }
 - { role: scripts }

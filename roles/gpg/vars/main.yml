@@ -1,0 +1,11 @@
+# https://github.com/drduh/YubiKey-Guide#debian-and-ubuntu
+apt_packages:
+  - gnupg2 
+  - gnupg-agent 
+  - dirmngr 
+  - cryptsetup 
+  - scdaemon 
+  - pcscd 
+  - secure-delete 
+  - hopenpgp-tools 
+  - yubikey-personalization
