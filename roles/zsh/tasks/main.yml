@@ -34,7 +34,7 @@
 - name: Copy ZSH templates
   template:
     src: "secrets.j2"
-    dest: "{{dotfiles_user_home}}/.oh-my-zsh/secret"
+    dest: "{{dotfiles_user_home}}/.secrets"
     force: false
 
 - name: Change Default Shell to Zsh

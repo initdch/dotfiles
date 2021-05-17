@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/buerli/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -79,12 +79,12 @@ plugins=(
 	ansible
 )
 
-source $ZSH/secrets
+source $HOME/.secrets
 source $ZSH/oh-my-zsh.sh
 
 
 zstyle :omz:plugins:ssh-agent identities id_ed25519_joineer id_ed25519_nevis_watchtower
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/home/buerli/.sdkman"
-[[ -s "/home/buerli/.sdkman/bin/sdkman-init.sh" ]] && source "/home/buerli/.sdkman/bin/sdkman-init.sh"
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
