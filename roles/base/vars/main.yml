@@ -13,7 +13,6 @@ apt_packages:
   - golang
   - yubikey-manager
   - scdaemon
-  - npm
 
 snap_packages:
   - code

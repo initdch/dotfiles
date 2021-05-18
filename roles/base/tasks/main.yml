@@ -1,4 +1,3 @@
----
 - name: Upgrade installed packages
   become: yes
   become_user: root
@@ -10,13 +9,11 @@
   become_user: root
   become_method: sudo
   apt: pkg={{ apt_packages }} state=latest update_cache=yes
-
 - name: Install Snap Packages
   become: yes
   become_user: root
   become_method: sudo
-  snap: name={{ snap_packages }} classic=yes
-
+  community.general.snap: name={{ snap_packages }} classic=yes
 
 - name: Remove useless items
   file:
