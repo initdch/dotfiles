@@ -6,7 +6,7 @@
 if ! hash ansible >/dev/null 2>&1; then
     echo "Installing Ansible..."
     sudo apt-get install pip -y
-    yes | sudo pip install ansible-base
+    yes | sudo pip install ansible
 else
     echo "Ansible already installed"
 fi
