@@ -19,4 +19,4 @@ snap_packages:
   - slack
   - intellij-idea-ultimate
   - exercism
-  - flameshot
+  - gh
