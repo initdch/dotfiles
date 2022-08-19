@@ -80,9 +80,12 @@ plugins=(
 )
 
 source $HOME/.secrets
-zstyle :omz:plugins:ssh-agent identities id_ed25519_joineer id_ed25519_nevis_watchtower
+zstyle :omz:plugins:ssh-agent identities id_ed25519_joineer
 
 source $ZSH/oh-my-zsh.sh
+
+
+export PATH="$HOME/.local/bin:$PATH"
 
 # Aliases
 alias gw="./gradlew"

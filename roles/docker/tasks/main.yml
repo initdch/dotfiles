@@ -22,7 +22,7 @@
     url: https://download.docker.com/linux/ubuntu/gpg
     state: present
 
-- name: Add Docker Repoistory
+- name: Add Docker Repository
   become: yes
   become_user: root
   become_method: sudo
@@ -36,7 +36,7 @@
   become_method: sudo
   apt:
     update_cache: yes
-    name: ['docker-ce', 'docker-ce-cli', 'containerd.io']
+    name: ['docker-ce', 'docker-ce-cli', 'containerd.io', 'docker-compose-plugin']
     state: latest
 
 - name: Create Docker group

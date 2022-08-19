@@ -8,7 +8,6 @@ apt_packages:
   - zsh
   - meld
   - kdiff3
-  - npm
   - gnome-shell-pomodoro
   - golang
   - yubikey-manager

@@ -12,10 +12,3 @@
     update_cache: yes
     name: ['brightnessctl']
     state: latest
-
-- name: Download muteMic.sh
-  get_url:
-    url: https://gist.githubusercontent.com/initdch/71039ff0be30b614a28c54b5ee1a121a/raw/9dbc1aee16c05cab3f43877df62d6f55c093964b/muteMic.sh
-    dest: ~/scripts/muteMic.sh
-    mode: '0740'
-
