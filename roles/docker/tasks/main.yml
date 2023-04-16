@@ -22,12 +22,16 @@
     url: https://download.docker.com/linux/ubuntu/gpg
     state: present
 
+- name: Get DEB architecture
+  shell: dpkg --print-architecture
+  register: deb_architecture
+
 - name: Add Docker Repository
   become: yes
   become_user: root
   become_method: sudo
   apt_repository:
-    repo: 'deb https://download.docker.com/linux/ubuntu {{ ansible_distribution_release }} stable'
+    repo: 'deb [arch={{deb_architecture}}] https://download.docker.com/linux/ubuntu {{ ansible_distribution_release }} stable'
     state: present
 
 - name: Install Docker
