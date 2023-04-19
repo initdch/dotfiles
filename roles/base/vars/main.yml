@@ -1,6 +1,5 @@
 apt_packages:
   - curl
-  - git
   - htop
   - jq
   - vim
@@ -8,9 +7,7 @@ apt_packages:
   - zsh
   - meld
   - kdiff3
-  - gnome-shell-pomodoro
   - golang
-  - yubikey-manager
   - scdaemon
 
 snap_packages:

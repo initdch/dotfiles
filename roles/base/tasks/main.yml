@@ -16,6 +16,7 @@
   become_method: sudo
   community.general.snap: name={{ snap_packages }} classic=yes
 
+
 - name: Remove useless items
   file:
     path: '{{ item }}'
