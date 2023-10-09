@@ -1,8 +1,8 @@
 
-- name: Install SDKMAN
-  command: "curl -s 'https://get.sdkman.io' | bash"
-  args: 
-    creates: ~/.sdkman
+#- name: Install SDKMAN
+#  command: "curl -s 'https://get.sdkman.io' | bash"
+#  args: 
+#    creates: ~/.sdkman
 
 # sdk is not a script but collection of shell functions
 # - name: Install java 8
