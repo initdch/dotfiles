@@ -89,6 +89,9 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # Aliases
 alias gw="./gradlew"
+alias dcp="docker compose --profile \"*\" pull"
+alias dcu="docker compose up"
+alias dcuf="docker compose --profile frontend up"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
