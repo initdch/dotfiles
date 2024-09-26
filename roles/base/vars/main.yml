@@ -9,6 +9,7 @@ apt_packages:
   - kdiff3
   - golang
   - scdaemon
+  - neovim
 
 snap_packages:
   - code
