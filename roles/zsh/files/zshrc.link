@@ -94,6 +94,7 @@ alias dcu="docker compose up"
 alias dcuf="docker compose --profile frontend up"
 alias gs="git status"
 alias ga="git add"
+alias gc="git commit -m"
 alias gp="git pull"
 alias gpf="git pull --force"
 
