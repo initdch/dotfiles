@@ -1,0 +1,5 @@
+# List of Snap packages to install
+# Format: package_name [--classic]
+# Lines starting with # are ignored
+
+ghostty --classic
